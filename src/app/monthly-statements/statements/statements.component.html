@@ -1,11 +1,20 @@
-<section id="statements-view">
+<section id="statements-view" *ngIf="show">
     <div class="user-information">
         <p id="user-name">{{ username }}</p>
-        <p id="user-balance"></p>
+        <p id="user-balance">{{ overallBalance | currency }}</p>
     </div>
 
     <div id="monthly-statements">
-
+        <div class="statement-card" *ngFor="let month of monthStatements">
+            <!--<div>{{ item.amount }}</div>-->
+            <div class="month-year">{{ month.date}}</div>
+            <div class="monthly-balance">{{ month.balance | currency}}</div>
+            <div class="monthly-debit">
+                Debit: {{ month.debit | currency }}
+            </div>
+            <div class="monthly-credit">
+                Credit: {{ month.credit | currency }}
+            </div>
+        </div>
     </div>
 </section>
-{{ allStatements | json }}

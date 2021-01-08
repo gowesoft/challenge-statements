@@ -26,7 +26,6 @@ export class FilterComponent implements OnInit {
 		if (this.searchForm.value.userID !== '') {
 			this.filterService.getStatements(this.searchForm.value.userID).subscribe(data => {
 				data.userID = this.searchForm.value.userID;
-				this.hideLoader.emit(false);
 				this.sendStatements.emit(data);
 			});
 		}

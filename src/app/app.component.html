@@ -7,6 +7,6 @@
     
     <app-loader [toggleLoader]="showLoader"></app-loader>
     
-    <app-statements [statements]="statements"></app-statements>
+    <app-statements (hideLoader)="toggleLoader($event)" [statements]="statements"></app-statements>
     
 </div>
