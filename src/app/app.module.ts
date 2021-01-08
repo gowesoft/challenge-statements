@@ -7,23 +7,22 @@ import { FilterComponent } from './monthly-statements/filter/filter.component';
 import { LoaderComponent } from './monthly-statements/loader/loader.component';
 import { StatementsComponent } from './monthly-statements/statements/statements.component';
 
-
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FilterComponent,
-    LoaderComponent,
-    StatementsComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        FilterComponent,
+        LoaderComponent,
+        StatementsComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

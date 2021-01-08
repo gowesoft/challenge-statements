@@ -32,5 +32,4 @@ export class FilterComponent implements OnInit {
 	}
 
 	ngOnInit(): void { }
-
 }

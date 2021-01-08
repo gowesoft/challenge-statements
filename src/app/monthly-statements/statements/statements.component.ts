@@ -130,5 +130,4 @@ export class StatementsComponent implements OnChanges {
 			this.clearVariables();
 		}
 	}
-
 }
