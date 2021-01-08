@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'stensul';
+    showLoader = false;
+
+    toggleLoader(show: boolean) {
+        this.showLoader = show;
+    }
 }

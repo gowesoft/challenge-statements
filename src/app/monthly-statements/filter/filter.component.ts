@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { FilterService } from './filter.service';
 
@@ -8,6 +8,8 @@ import { FilterService } from './filter.service';
 	styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
+	@Output() hideLoader = new EventEmitter<boolean>();
+
 	searchForm: FormGroup = new FormGroup({
 		userID: new FormControl('')
 	});
@@ -17,10 +19,12 @@ export class FilterComponent implements OnInit {
 		private fb: FormBuilder
 	) { }
 
-	onSubmit(): void {
+	onSubmit(hideLoader: any): void {
+		this.hideLoader.emit(hideLoader);
 		if (this.searchForm.value.userID !== '') {
 			this.filterService.getStatements(this.searchForm.value.userID).subscribe(data => {
 				console.log(data);
+				this.hideLoader.emit(false);
 			});
 		}
 	}

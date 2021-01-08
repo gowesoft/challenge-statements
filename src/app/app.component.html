@@ -3,9 +3,9 @@
 </nav>
 
 <div class="content">
-    <app-filter></app-filter>
+    <app-filter (hideLoader)="toggleLoader($event)"></app-filter>
     
-    <app-loader></app-loader>
+    <app-loader [toggleLoader]="showLoader"></app-loader>
     
     <app-statements></app-statements>
     
