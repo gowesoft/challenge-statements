@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'stensul';
     showLoader = false;
+    statements = '';
 
     toggleLoader(show: boolean) {
         this.showLoader = show;
+    }
+
+    getStatements(statements: any) {
+        this.statements = statements;
     }
 }

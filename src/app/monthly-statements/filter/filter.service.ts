@@ -14,4 +14,8 @@ export class FilterService {
 	getStatements(id: string): Observable<any> {
 		return this.http.get(`${this.url}${id}`);
 	}
+
+	getAllStatements(id: string, num: string): Observable<any> {
+		return this.http.get(`${this.url}${id}&page=${num}`);
+	}
 }

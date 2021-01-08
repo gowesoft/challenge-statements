@@ -9,6 +9,7 @@ import { FilterService } from './filter.service';
 })
 export class FilterComponent implements OnInit {
 	@Output() hideLoader = new EventEmitter<boolean>();
+	@Output() sendStatements = new EventEmitter<any>();
 
 	searchForm: FormGroup = new FormGroup({
 		userID: new FormControl('')
@@ -21,10 +22,12 @@ export class FilterComponent implements OnInit {
 
 	onSubmit(hideLoader: any): void {
 		this.hideLoader.emit(hideLoader);
+		this.sendStatements.emit('');
 		if (this.searchForm.value.userID !== '') {
 			this.filterService.getStatements(this.searchForm.value.userID).subscribe(data => {
-				console.log(data);
+				data.userID = this.searchForm.value.userID;
 				this.hideLoader.emit(false);
+				this.sendStatements.emit(data);
 			});
 		}
 	}
