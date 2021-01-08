@@ -4,6 +4,9 @@
 - Clonar el repositorio en una ubicación local.
 
 - Abrir en otra consola la carpeta "meli/client" y ejecutar los siguientes comandos:
+
+> npm install
+
 > npm install -g @angular/cli
 
 > ng serve
