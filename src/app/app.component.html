@@ -3,10 +3,10 @@
 </nav>
 
 <div class="content">
-    <app-filter (hideLoader)="toggleLoader($event)"></app-filter>
+    <app-filter (hideLoader)="toggleLoader($event)" (sendStatements)="getStatements($event)"></app-filter>
     
     <app-loader [toggleLoader]="showLoader"></app-loader>
     
-    <app-statements></app-statements>
+    <app-statements (hideLoader)="toggleLoader($event)" [statements]="statements"></app-statements>
     
 </div>
