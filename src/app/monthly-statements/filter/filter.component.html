@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="padding-left-from-image">
+    <section class="flex select-form-container" id="filter-view">
+        <div class="select">
+            <select id="user-select" formControlName="userID">
+                <option selected disabled value="-1">Select User</option>
+                <option value="1">John Oliver</option>
+                <option value="2">Bob Martin</option>
+                <option value="3">Helena Fernandez</option>
+                <option value="4">Francesco De Mello</option>
+            </select>
+        </div>
+
+        <button type="submit" id="submit-btn">
+            Show
+        </button>
+    </section>
+</form>

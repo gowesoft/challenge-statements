@@ -1,40 +1,12 @@
-<router-outlet></router-outlet>
-
 <nav class="app-nav">
     <h1 class="app-title">Monthly Statements</h1>
 </nav>
 
 <div class="content">
-    <section class="flex select-form-container" id="filter-view">
-        <div class="select">
-            <select id="user-select">
-                <option selected disabled value="-1">Select User</option>
-                <option value="1">John Oliver</option>
-                <option value="2">Bob Martin</option>
-                <option value="3">Helena Fernandez</option>
-                <option value="4">Francesco De Mello</option>
-            </select>
-        </div>
-
-        <button type="submit" id="submit-btn">
-            Show
-        </button>
-    </section>
-
-    <div id="loader-view">
-        <section class="loader-container">
-            <span class="loader"></span>
-        </section>
-    </div>
-
-    <section id="statements-view">
-        <div class="user-information">
-            <p id="user-name"></p>
-            <p id="user-balance"></p>
-        </div>
-
-        <div id="monthly-statements">
-
-        </div>
-    </section>
+    <app-filter></app-filter>
+    
+    <app-loader></app-loader>
+    
+    <app-statements></app-statements>
+    
 </div>
