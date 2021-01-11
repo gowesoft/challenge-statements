@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "stensul": {
+    "challenge": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/stensul",
+            "outputPath": "dist/challenge",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "stensul:build"
+            "browserTarget": "challenge:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "stensul:build:production"
+              "browserTarget": "challenge:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "stensul:build"
+            "browserTarget": "challenge:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "stensul:serve"
+            "devServerTarget": "challenge:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "stensul:serve:production"
+              "devServerTarget": "challenge:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "stensul"
+  "defaultProject": "challenge"
 }

@@ -1,4 +1,4 @@
-# Stensul
+# Challenge
 
 ## Instrucciones para levantar el proyecto:
 - Clonar el repositorio en una ubicación local.
